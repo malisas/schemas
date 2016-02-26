@@ -8,7 +8,7 @@ associations in a GA4GH datastore. The user can search for associations
 by building queries composed of features, phenotypes, and/or evidence
 terms. The API is designed to accommodate search terms specified as
 either a string, external identifier, ontology identifier, or as an
-'entity' (See Data Model section). These terms are combined as an
+'entity'. These terms are combined as an
 ``AND`` of ``(feature && phenotype && evidence)``. This flexibility in
 the schema allows a variety of data to be stored in the database and
 allows users to express a wide range of queries.
@@ -95,15 +95,15 @@ Use cases
    `clinical study evidence <http://purl.obolibrary.org/obo/ECO_0000180>`__
    as the evidence.
 
-In response, I will receive back a list of associations involving GIST
-and *KIT*, which I can filter for instances where imatinib is mentioned.
-URI's in the ``associations`` field could - hypothetically - be followed
-to discover that `GIST patients with wild-type *KIT* have decreased
-sensitivity to therapy with
-imatinib <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2651076/>`__.
+   In response, I will receive back a list of associations involving GIST
+   and *KIT*, which I can filter for instances where imatinib is mentioned.
+   URI's in the ``associations`` field could - hypothetically - be followed
+   to discover that `GIST patients with wild-type *KIT* have decreased
+   sensitivity to therapy with
+   imatinib <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2651076/>`__.
 
-If I left both the ``genotype`` and ``evidence`` fields as ``null``, I
-would receive back all associations which involve GIST as a phenotype.
+   If I left both the ``genotype`` and ``evidence`` fields as ``null``, I
+   would receive back all associations which involve GIST as a phenotype.
 
 2) As a non-Hodgkin's lymphoma researcher, I may know that the gene
    *CD20* has abnormal expression in
