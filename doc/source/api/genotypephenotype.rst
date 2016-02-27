@@ -80,6 +80,13 @@ the concept of an
 `OntologyTerm <../../../src/main/resources/avro/metadata.avdl#L16>`__
 (see end of document for discussion on usage of OntologyTerms).
 
+Data Model
+----------
+
+.. figure:: https://cdn.rawgit.com/malisas/schema-uml/master/example_svgs/g2p_2016-02-26.svg
+   :alt: image
+
+
 Use cases
 ---------
 
