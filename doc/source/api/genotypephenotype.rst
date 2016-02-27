@@ -25,7 +25,7 @@ Request
 ~~~~~~~
 
 The G2P schemas define a single endpoint ``/genotypephenotype/search``
-which accepts a POST of a `request body <https://github.com/ga4gh/schemas/blob/be171b00a5f164836dfd40ea5ae75ea56924d316/src/main/resources/avro/genotypephenotypemethods.avdl#L102>`__
+which accepts a POST of a `request body <../../../src/main/resources/avro/genotypephenotypemethods.avdl#L151>`__
 in `JSON <http://json.org/example.html>`__ format. The request may
 contain a feature, phenotype, and/or evidence, which are combined as a
 logical AND to query the underlying datastore. Missing types are treated
@@ -36,9 +36,9 @@ as a wildcard, returning all data.
 Response
 ~~~~~~~~
 
-`Responses <https://github.com/ga4gh/schemas/blob/be171b00a5f164836dfd40ea5ae75ea56924d316/src/main/resources/avro/genotypephenotypemethods.avdl#L130>`__
+`Responses <../../../src/main/resources/avro/genotypephenotypemethods.avdl#L184>`__
 of matching data are returned as a list of
-`FeaturePhenotypeAssociation <https://github.com/ga4gh/schemas/blob/be171b00a5f164836dfd40ea5ae75ea56924d316/src/main/resources/avro/genotypephenotype.avdl#L132>`__\ s.
+`FeaturePhenotypeAssociation <../../../src/main/resources/avro/genotypephenotype.avdl#L152>`__\ s.
 
 .. figure:: https://cloud.githubusercontent.com/assets/47808/9339152/53d42aca-459d-11e5-8c91-204f42dc233a.png
    :alt: image
@@ -57,19 +57,19 @@ ontology.
 
 Due to the flexibility of the data model, users have a number of options
 for specifying each query term
-(`feature <https://github.com/ga4gh/schemas/blob/be171b00a5f164836dfd40ea5ae75ea56924d316/src/main/resources/avro/genotypephenotypemethods.avdl#L105>`__,
-`phenotype <https://github.com/ga4gh/schemas/blob/be171b00a5f164836dfd40ea5ae75ea56924d316/src/main/resources/avro/genotypephenotypemethods.avdl#L108>`__,
+(`feature <../../../src/main/resources/avro/genotypephenotypemethods.avdl#L159>`__,
+`phenotype <../../../src/main/resources/avro/genotypephenotypemethods.avdl#L162>`__,
 and
-`evidence <https://github.com/ga4gh/schemas/blob/be171b00a5f164836dfd40ea5ae75ea56924d316/src/main/resources/avro/genotypephenotypemethods.avdl#L111>`__).
+`evidence <../../../src/main/resources/avro/genotypephenotypemethods.avdl#L165>`__).
 For instance, a feature can potentially be represented in increasing
 specificity as either [a string, an ontology identifier, an external
 identifier, or as a feature 'entity'].
 
 The POST data sent as part of ``/genotypephenotype/search`` must be in
 JSON format and must obey the
-`SearchFeaturesRequest <https://github.com/ga4gh/schemas/blob/be171b00a5f164836dfd40ea5ae75ea56924d316/src/main/resources/avro/genotypephenotypemethods.avdl#L102>`__
+`SearchFeaturesRequest <../../../src/main/resources/avro/genotypephenotypemethods.avdl#L151>`__
 schema.
-`SearchFeaturesResponse <https://github.com/ga4gh/schemas/blob/be171b00a5f164836dfd40ea5ae75ea56924d316/src/main/resources/avro/genotypephenotypemethods.avdl#L130>`__
+`SearchFeaturesResponse <../../../src/main/resources/avro/genotypephenotypemethods.avdl#L184>`__
 is the response from ``POST /genotypephenotype/search``, also expressed
 as JSON.
 
@@ -77,7 +77,7 @@ The ``SearchFeaturesRequest`` and ``SearchFeaturesResponse`` records
 each have their own data structures, but they use many of the same types
 (see the 3rd table for shared data-types). Many types rely heavily on
 the concept of an
-`OntologyTerm <https://github.com/ga4gh/schemas/blob/be171b00a5f164836dfd40ea5ae75ea56924d316/src/main/resources/avro/ontologies.avdl#L10>`__
+`OntologyTerm <../../../src/main/resources/avro/metadata.avdl#L16>`__
 (see end of document for discussion on usage of OntologyTerms).
 
 Use cases
