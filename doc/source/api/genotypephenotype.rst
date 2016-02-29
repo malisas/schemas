@@ -77,8 +77,7 @@ is the response from ``POST /genotypephenotype/search``, also expressed
 as JSON.
 
 The ``SearchFeaturesRequest`` and ``SearchFeaturesResponse`` records
-each have their own data structures, but they use many of the same types
-(see the 3rd table for shared data-types). Many types rely heavily on
+each have their own data structures, but they use many of the same types. Many types rely heavily on
 the concept of an
 `OntologyTerm <../../../src/main/resources/avro/metadata.avdl#L16>`__
 (see end of document for discussion on usage of OntologyTerms).
