@@ -85,7 +85,7 @@ the concept of an
 .. figure:: https://cdn.rawgit.com/malisas/schema-uml/master/example_svgs/g2p_2016-02-26.svg
    :alt: image
 
-Each FeaturePhenotypeAssociation belongs to a PhenotypeAssociationSet. Queries can be restricted to search over a specific PhenotypeAssociationSet. The use of PhenotypeAssociationSets allows queries to be tailored to specific servers, or for data formatted in a certain way. For example, server X might accept a phenotype query value of :code:`["http://www.ebi.ac.uk/efo/EFO_0000729"]`, while on server Y the same string is meaningless.
+Each FeaturePhenotypeAssociation belongs to a PhenotypeAssociationSet. Queries can be restricted to search over a specific PhenotypeAssociationSet. The use of PhenotypeAssociationSets allows queries to be routed to specific servers or datasets. For example, server X might accept a phenotype query value of :code:`["http://www.ebi.ac.uk/efo/EFO_0000729"]`, while on server Y the same string is meaningless.
 
 Use cases
 ---------
