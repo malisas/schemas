@@ -31,6 +31,8 @@ contain a feature, phenotype, and/or evidence, which are combined as a
 logical AND to query the underlying datastore. Missing types are treated
 as a wildcard, returning all data.
 
+Users may specify a PhenotypeAssociationSet to specifically search.
+
 |image| http://yuml.me/edit/bf06b90a
 
 Response
@@ -43,9 +45,10 @@ of matching data are returned as a list of
 .. figure:: https://cloud.githubusercontent.com/assets/47808/9339152/53d42aca-459d-11e5-8c91-204f42dc233a.png
    :alt: image
 
-   image
+http://yuml.me/edit/25343da1 
 
-http://yuml.me/edit/25343da1 ## Data Model
+Data Model
+----------
 
 Intent: The GA4GH Ontology schema provides structures for unambiguous
 references to ontological concepts and/or controlled vocabularies within
@@ -80,12 +83,10 @@ the concept of an
 `OntologyTerm <../../../src/main/resources/avro/metadata.avdl#L16>`__
 (see end of document for discussion on usage of OntologyTerms).
 
-Data Model
-----------
-
 .. figure:: https://cdn.rawgit.com/malisas/schema-uml/master/example_svgs/g2p_2016-02-26.svg
    :alt: image
 
+Each FeaturePhenotypeAssociation belongs to a PhenotypeAssociationSet. Queries can be restricted to search over a specific PhenotypeAssociationSet. The use of PhenotypeAssociationSets allows queries to be tailored to specific servers, or for data formatted in a certain way. For example, server X might accept a phenotype query value of :code:`["http://www.ebi.ac.uk/efo/EFO_0000729"]`, while on server Y the same string is meaningless.
 
 Use cases
 ---------
