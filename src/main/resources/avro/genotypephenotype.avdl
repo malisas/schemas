@@ -131,6 +131,10 @@ This is also a stub for further expansion.  We should consider moving this into
 it's own schema.
 */
 record Evidence {
+  /** 
+  Id of this node. 
+  */
+  string id;
 
   /** ECO or OBI is recommended */
   OntologyTerm evidenceType;
