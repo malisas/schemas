@@ -123,12 +123,22 @@ record ExternalIdentifierQuery {
 This request maps to the body of `POST /genotypephenotype/search` as JSON.
 
 The goal here is to allow users to query using one or more of
-Genotype, Phenotype, Environment, and Evidence.
+genotype, phenotype, and evidence.
 
-A query using one of the above items is to mean, by default,
-that the remainder of the query is as a "wildcard", such
-that all matches to just that query term would come back.
-Combinations of the above are to act like AND rather than OR.
+Combinations of genotype, phenotype, and evidence are to act 
+like AND rather than OR. A query for genotype X 
+and phenotype Y will return associations which include both 
+genotype X AND phenotype Y.
+
+However, if genotype is specified as an array of objects 
+(e.g. if genotype is an array of ontology terms), the objects 
+in the array are to be combined using OR, meaning a search 
+can match on only one of the objects in the array. The
+same is true for the phenotype and evidence fields.
+
+If one or more fields (genotype, phenotype, and evidence) is left
+unspecified, those fields will be treated as wild-cards, 
+such that all matches to the unspecified fields will come back.
 
 The "genotype" part of the query methods can be one or more
 genomic features.  Associations can be made at many
@@ -147,6 +157,7 @@ the subclass closure.
 Each query can be made against a string, an array of external
 identifers (such as for gene or SNP ids), ontology term ids, or
 full feature/phenotype/evidence objects.
+
 */
 record SearchGenotypePhenotypeRequest {
 
