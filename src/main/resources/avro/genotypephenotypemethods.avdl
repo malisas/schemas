@@ -130,11 +130,9 @@ like AND rather than OR. A query for genotype X
 and phenotype Y will return associations which include both 
 genotype X AND phenotype Y.
 
-However, if genotype is specified as an array of objects 
+If genotype (or phenotype or evidence) is specified as an array of objects 
 (e.g. if genotype is an array of ontology terms), the objects 
-in the array are to be combined using OR, meaning a search 
-can match on only one of the objects in the array. The
-same is true for the phenotype and evidence fields.
+within the array are combined using OR.
 
 If one or more fields (genotype, phenotype, and evidence) is left
 unspecified, those fields will be treated as wild-cards, 
