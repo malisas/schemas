@@ -82,10 +82,12 @@ the concept of an
 `OntologyTerm <../../../src/main/resources/avro/metadata.avdl#L16>`__
 (see end of document for discussion on usage of OntologyTerms).
 
+The following is a UML diagram of the G2P Data Model (not including methods data types), illustrating references (dashed green lines) and containments (orange lines).
+
 .. figure:: https://cdn.rawgit.com/malisas/schema-uml/master/example_svgs/g2p_2016-02-26.svg
    :alt: image
 
-Each FeaturePhenotypeAssociation belongs to a PhenotypeAssociationSet. Queries can be restricted to search over a specific PhenotypeAssociationSet. The use of PhenotypeAssociationSets allows queries to be routed to specific servers or datasets. For example, server X might accept a phenotype query value of :code:`["http://www.ebi.ac.uk/efo/EFO_0000729"]`, while on server Y the same string is meaningless.
+Each ``FeaturePhenotypeAssociation`` belongs to a ``PhenotypeAssociationSet``. Queries can be restricted to search over a specific ``PhenotypeAssociationSet``. The use of sets allows queries to be routed to specific servers or datasets. For example, server X might accept an evidence query value of type ``OntologyTerm`` with ontology source identifier :code:`"http://purl.obolibrary.org/obo/ECO_0000180"`, while on server Y the same value is meaningless.
 
 Use cases
 ---------
