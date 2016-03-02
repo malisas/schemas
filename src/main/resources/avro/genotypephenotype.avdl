@@ -122,6 +122,11 @@ record PhenotypeInstance {
   */
   union { null, string } description = null;
 
+  /**
+  Optional external identifiers for this phenotype instance
+  */
+  union { null, array<ExternalIdentifier> } identifiers = null
+
 }
 
 
@@ -144,6 +149,11 @@ record Evidence {
 	structured description in the evidenceType field 
 	*/
   union { null, string } description = null;
+
+  /**
+  Optional external identifiers for this Evidence record
+  */
+  union { null, array<ExternalIdentifier> } identifiers = null
 
 }
 
