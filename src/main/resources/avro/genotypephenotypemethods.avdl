@@ -91,6 +91,8 @@ The feature collection to search for.  One or more features (variants,
 genes, etc) can be specified.  The idea here is that if a
 query is for a gene, then any alleles to that gene for which
 there are annotation records would be returned.
+
+TODO: Consider changing the array of Feature objects to an array of featureId.
 */
 record GenomicFeatureQuery {
   array<org.ga4gh.models.Feature> features;
@@ -99,6 +101,8 @@ record GenomicFeatureQuery {
 
 /**
 One or more phenotypes can be queried together.
+
+TODO: Consider changing the array of PhenotypeInstance objects to an array of phenotypeInstanceId.
 */
 record PhenotypeQuery {
   array<org.ga4gh.models.PhenotypeInstance> phenotypes;
