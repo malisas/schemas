@@ -125,7 +125,7 @@ record PhenotypeInstance {
   /**
   Optional external identifiers for this phenotype instance
   */
-  union { null, array<ExternalIdentifier> } identifiers = null
+  union { null, array<ExternalIdentifier> } identifiers = null;
 
 }
 
@@ -153,7 +153,7 @@ record Evidence {
   /**
   Optional external identifiers for this Evidence record
   */
-  union { null, array<ExternalIdentifier> } identifiers = null
+  union { null, array<ExternalIdentifier> } identifiers = null;
 
 }
 
